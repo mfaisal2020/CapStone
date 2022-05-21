@@ -16,7 +16,7 @@ public class ValidationModule {
     @Autowired
     private ProductRepo prdRepo;
 
-    public boolean validateUser(@RequestParam String userName, String deviceID){
+    public boolean validateUser(@RequestParam String userName){
         boolean a = usrRepo.existsById(userName);
         return a;
     }
